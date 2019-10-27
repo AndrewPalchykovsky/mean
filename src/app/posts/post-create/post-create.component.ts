@@ -15,7 +15,7 @@ export class PostCreateComponent {
     const post = {
       title: this.enteredTitle,
       content: this.enteredContent
-    }
+    };
     this.postCreated.emit(post);
   }
 }
