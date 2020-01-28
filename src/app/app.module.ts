@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PostCreateComponent } from './posts/post-create/post-create.component';
@@ -31,7 +32,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
