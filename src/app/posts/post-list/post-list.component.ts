@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { Post } from '../post.model';
 import { PostsService } from '../posts.service';
 
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -13,12 +14,12 @@ export class PostListComponent implements OnInit, OnDestroy {
 
   posts: Post[] = [];
   private postSub: Subscription;
-  // {
-  //   title: 'First post',
-  //   content: 'This is first post content'
-  // },
 
   constructor(public postsService: PostsService) { }
+
+  onDelete(postId: string) {
+    this.postsService.deletePost(postId);
+  }
 
   ngOnInit() {
     this.postsService.getPosts();
