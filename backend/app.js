@@ -27,11 +27,11 @@ app.post('/api/posts', (req, res, next) => {
   const post = req.body;
   console.log(post);
   res.status(201).json({
-    message: 'POst added successfully'
+    message: 'Post added successfully'
   });
 });
 
-app.use('/api/posts', (req, res, next) => {
+app.get('/api/posts', (req, res, next) => {
   const posts = [{
       id: 'adjhasjd21',
       title: "This title is from server",
