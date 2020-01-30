@@ -62,7 +62,7 @@ app.delete('/api/posts/:id', (req, res, next) => {
   }).then(result => {
     console.log(result);
   });
-  req.status(200).json({
+  res.status(200).json({
     message: 'Post deleted'
   });
 })
