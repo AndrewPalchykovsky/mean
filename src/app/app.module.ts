@@ -16,6 +16,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
+import { CurrencyComponent } from './currency/currency.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     PostCreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostListComponent,
+    CurrencyComponent
   ],
   imports: [
     AppRoutingModule,
