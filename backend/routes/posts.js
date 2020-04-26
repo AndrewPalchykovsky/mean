@@ -28,7 +28,7 @@ router.put('/:id', (req, res, next) => {
     _id: req.params.id
   }, post).then(result => {
     console.log(result);
-    req.status(200).json({
+    res.status(200).json({
       message: "Update succesful"
     })
   })
