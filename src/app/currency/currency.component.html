@@ -1,13 +1,7 @@
-<div *ngFor="let currency of currencies">
-    <mat-list>
-        <mat-list-item>
-            <h1>
-                {{currency.ccy}} to {{currency.base_ccy}}
-            </h1>
-            <p>Sale : {{currency.sale}}</p>
-            <p>Buy : {{currency.buy}} </p>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-    </mat-list>
-
-</div>
+<mat-card class="card" *ngFor="let currency of currencies">
+    <mat-card-header>
+        <mat-card-title>{{currency.ccy}} to {{currency.base_ccy}}</mat-card-title>
+        <mat-card-subtitle>Sale : {{currency.sale}}</mat-card-subtitle>
+        <mat-card-subtitle>Sale : {{currency.buy}}</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>

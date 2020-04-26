@@ -1,0 +1,6 @@
+:host {
+  display: flex;
+  max-width: 80%;
+  margin: 1rem auto 0;
+  justify-content: space-between;
+}
