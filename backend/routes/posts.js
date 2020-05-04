@@ -34,12 +34,12 @@ router.post('', multer({
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
-    imagePath: url + '/images/' + req.fiel.filename
+    imagePath: url + '/images/' + req.file.filename
   });
   post.save().then(createdPost => {
     res.status(201).json({
       message: 'Post added successfully',
-      postId: {
+      post: {
         ...createdPost,
         id: createdPost._id,
       }
