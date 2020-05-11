@@ -20,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { CurrencyComponent } from './currency/currency.component';
 import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { LoginComponent } from './auth/login/login.component';
     HeaderComponent,
     PostListComponent,
     CurrencyComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     AppRoutingModule,
