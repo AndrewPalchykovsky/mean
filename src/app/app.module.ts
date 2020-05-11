@@ -19,6 +19,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { CurrencyComponent } from './currency/currency.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { CurrencyComponent } from './currency/currency.component';
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
-    CurrencyComponent
+    CurrencyComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
