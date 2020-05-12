@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
       return;
     } else {
       this.authService.login(form.value.email, form.value.password);
-      console.log(form.value);
 
     }
   }
