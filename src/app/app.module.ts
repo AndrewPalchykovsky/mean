@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './angular-material.module';
 import { PostModule } from './posts/post.module';
-import { AuthModule } from './auth/auth.module';
+
 
 import { HeaderComponent } from './header/header.component';
 import { CurrencyComponent } from './currency/currency.component';
@@ -36,7 +36,7 @@ import { ErrorComponent } from './error/error.component';
     HttpClientModule,
     AngularMaterialModule,
     PostModule,
-    AuthModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
