@@ -1,5 +1,7 @@
 const Post = require('../models/post');
 
+
+
 exports.createPost = (req, res, next) => {
   const url = req.protocol + '://' + req.get('host');
   const post = new Post({
@@ -25,6 +27,7 @@ exports.createPost = (req, res, next) => {
 }
 
 
+
 exports.updatePost = (req, res, next) => {
   let imagePath = req.body.imagePath;
   if (req.file) {
@@ -42,7 +45,7 @@ exports.updatePost = (req, res, next) => {
     _id: req.params.id,
     creator: req.userData.userId
   }, post).then(result => {
-    if (result.nModified > 0) {
+    if (result.n > 0) {
       res.status(200).json({
         message: "Update succesful"
       })
@@ -57,6 +60,8 @@ exports.updatePost = (req, res, next) => {
     })
   });
 }
+
+
 
 exports.getPosts = (req, res, next) => {
 
@@ -88,6 +93,8 @@ exports.getPosts = (req, res, next) => {
     });;
 }
 
+
+
 exports.getPost = (req, res, next) => {
   Post.findById(req.params.id).then(post => {
     if (post) {
@@ -103,6 +110,8 @@ exports.getPost = (req, res, next) => {
     })
   });
 }
+
+
 
 exports.deletePost = (req, res, next) => {
   Post.deleteOne({
