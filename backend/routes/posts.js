@@ -10,7 +10,7 @@ const extractFile = require('../middleware/file.js');
 
 router.post('', checkAuth, extractFile, PostController.createPost);
 
-router.put('/:id', extractFile, PostController.updatePost);
+router.put('/:id', checkAuth, extractFile, PostController.updatePost);
 
 router.get('', PostController.getPosts);
 
